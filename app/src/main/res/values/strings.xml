@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Precious Heart</string>
+    <string name="save">Save</string>
+    <string name="systolic">Systolic</string>
+    <string name="diastolic">Diastolic</string>
+    <string name="heartRate">Heart Rate</string>
 </resources>

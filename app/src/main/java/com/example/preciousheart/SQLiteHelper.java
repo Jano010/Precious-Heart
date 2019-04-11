@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class SQLiteHelper extends SQLiteOpenHelper {
 
-    final String createUserTable = "CREATE TABLE history (id INTEGER, day TEXT, systolic INTEGER, diastolic INTEGER, heartRate INTEGER)";
 
     public SQLiteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -14,7 +13,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(createUserTable);
+        db.execSQL(utilities.createUserTable);
     }
 
     @Override
