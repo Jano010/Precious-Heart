@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Precious Hearth</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="systolic">Systolic</string>
+    <string name="diastolic">Diastolic</string>
+    <string name="hearRate">Hear Rate</string>
+    <string name="save">Save</string>
+    <string name="show">Show History</string>
 </resources>
