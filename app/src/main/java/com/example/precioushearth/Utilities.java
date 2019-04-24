@@ -12,4 +12,10 @@ public class Utilities {
     public static String dateFormat = "MM-dd-yyyy HH:mm:ss";
     public static String insertSucced = "Data inserted";
     public static String insertFail = "Failed to insert Data";
+    public static String errorMessage = "Error";
+    public static String messageError = "Data not found";
+    public static String data = "data";
+
+    //Color strings
+    public static String headerColor = "#c0c0c0";
 }

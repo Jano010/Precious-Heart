@@ -1,5 +1,8 @@
 package com.example.precioushearth;
 
+import android.content.Intent;
+import android.database.Cursor;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         showButton = (Button) findViewById(R.id.historyButton);
 
         addData();
+        showHistory();
     }
 
     public void addData() {
@@ -59,9 +63,38 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        Cursor showDB = historyDB.showHistory();
+                        if( showDB.getCount() == 0) {
+                            //Method to show error or succed message
+                            showMessage(Utilities.errorMessage, Utilities.messageError );
+                            return;
+                        }
 
+                        StringBuffer buffer = new StringBuffer();
+                        while (showDB.moveToNext()) {
+                            buffer.append("Id : " + showDB.getString(0) + "\n");
+                            buffer.append(Utilities.dateAndTime + " : " + showDB.getString(1) + "\n");
+                            buffer.append(Utilities.systolic + " : " + showDB.getInt(2) + "\n");
+                            buffer.append(Utilities.diastolic + " : " + showDB.getInt(3) + "\n");
+                            buffer.append(Utilities.heartRate + " : " + showDB.getInt(4) + "\n");
+                        }
+
+                        //Show all data
+                        showMessage(Utilities.data, buffer.toString());
                     }
                 }
         );
+    }
+
+    public void showMessage(String title, String message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setMessage(title);
+        builder.show();
+    }
+    //Method to open the table activity
+    public void launchTableActivity(View view) {
+        Intent intent = new Intent(this, TableActovoty.class);
+        startActivity(intent);
     }
 }

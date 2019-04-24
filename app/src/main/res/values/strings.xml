@@ -7,4 +7,5 @@
     <string name="hearRate">Hear Rate</string>
     <string name="save">Save</string>
     <string name="show">Show History</string>
+    <string name="table">Table History</string>
 </resources>

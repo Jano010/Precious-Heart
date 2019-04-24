@@ -69,9 +69,11 @@ public class SQLHelper extends SQLiteOpenHelper {
         }
     }
 
+    //Method to see the date on the database
     public Cursor showHistory() {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor showDB = db.rawQuery("select * from " + tableName, null);
+        Cursor showDB = db.rawQuery("SELECT * FROM " + tableName, null);
+        return showDB;
     }
 
 }
