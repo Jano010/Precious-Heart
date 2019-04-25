@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Precious Heart 2</string>
+    <string name="systolic">Systolic</string>
+    <string name="diastolic">Diastolic</string>
+    <string name="heartRate">Heart Rate</string>
+    <string name="save">Save</string>
+    <string name="showHistory">Show History</string>
+    <string name="alarm">Alarm</string>
+    <string name="setAlarm">Set Alarm</string>
+    <string name="tableActivity">History Table</string>
+    <string name="alarmActivity">Alarm</string>
+</resources>
